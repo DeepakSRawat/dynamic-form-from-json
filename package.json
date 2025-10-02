@@ -6,8 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc && npm run copy-assets",
-    "copy-assets": "cp -r src/assets dist/assets"
+    "build": "tsc"
   },
   "keywords": [
     "dynamic form",
