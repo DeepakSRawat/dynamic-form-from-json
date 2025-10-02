@@ -39,6 +39,7 @@
     "skipLibCheck": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "typeRoots": ["./declarations", "./node_modules/@types"]
   },
   "include": [
     "src"
