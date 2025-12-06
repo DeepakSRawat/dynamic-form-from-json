@@ -1,10 +1,10 @@
-<h1 align="center">form-from-json</h1> 
+<h1 align="center">dynamic-form-from-json</h1> 
 <p align="center">
   <strong>Create Forms Fast and Easy</strong><br>
   for React Native Expo app
 </p>
 
-form-from-json is a React Native library built on top of react-hook-form.
+dynamic-form-from-json is a React Native library built on top of react-hook-form.
 
 It’s designed to make creating forms quick and simple. You just need to create an array of objects to define input fields type, with optional settings like “required”, "placeholeder" and "Validation".
 
@@ -18,7 +18,7 @@ npm install form-from-json
 
 # Usage Example
 ```
-import DynamicForm from "form-from-json";
+import DynamicForm from "dynamic-form-from-json";
 import { StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
