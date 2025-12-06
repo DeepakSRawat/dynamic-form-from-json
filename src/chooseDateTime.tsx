@@ -1,8 +1,7 @@
 import DateTimePicker from "@react-native-community/datetimepicker";
 import React, { useState } from "react";
 import { Controller } from "react-hook-form";
-import { Pressable, Text, TextInput, View } from "react-native";
-import { Calendar, Clock } from "./assets/icon";
+import { Image, Pressable, Text, TextInput, View } from "react-native";
 
 const DateTimeType = ({ field, control, errors }: any) => {
 	const [date, setDate] = useState<Date | null>();
@@ -67,7 +66,11 @@ const DateTimeType = ({ field, control, errors }: any) => {
 										}}
 										onPress={() => setShowCalender(true)}
 									>
-										<Calendar width={20} height={20} />
+										<Image
+											source={require("./assets/calendar-line.png")}
+											width={20}
+											height={20}
+										/>
 									</Pressable>
 									{showCalender && (
 										<DateTimePicker
@@ -111,7 +114,7 @@ const DateTimeType = ({ field, control, errors }: any) => {
 										borderColor: errors[field.name]
 											? "red"
 											: "#ccc",
-										flexDirection: "row", // Row layout
+										flexDirection: "row",
 										alignItems: "center",
 									}}
 								>
@@ -143,14 +146,18 @@ const DateTimeType = ({ field, control, errors }: any) => {
 										}}
 										onPress={() => setShowClock(true)}
 									>
-										<Clock width={20} height={20} />
+										<Image
+											source={require("./assets/time-line.png")}
+											width={20}
+											height={20}
+										/>
 									</Pressable>
 
 									{showClock && (
 										<DateTimePicker
 											design="material"
 											value={time ?? new Date()}
-											mode={"time"} // Change to 'time' for time picker
+											mode={"time"} // Change to 'date' for time picker
 											display="default"
 											onChange={(event, selectedTime) => {
 												setTime(selectedTime);

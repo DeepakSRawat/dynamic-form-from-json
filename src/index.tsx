@@ -29,10 +29,6 @@ export default function DynamicForm({
 	} = useForm({
 		mode: "onBlur",
 		reValidateMode: "onChange",
-		// defaultValues: schema.reduce((acc: any, field: any) => {
-		//   acc[field.name] = field.type === "checkbox" ? false : "";
-		//   return acc;
-		// }, {}),
 	});
 
 	const textType = ["text", "email", "password", "link"];
