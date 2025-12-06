@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Controller } from "react-hook-form";
-import { Pressable, Text, TextInput, View } from "react-native";
-import { EyeClosedIcon, EyeIcon } from "./assets/icon";
+import { Image, Pressable, Text, TextInput, View } from "react-native";
 
 const TextType = ({ field, control, errors, setValue }: any) => {
 	const [isVisible, setIsVisible] = useState(false);
@@ -86,9 +85,17 @@ const TextType = ({ field, control, errors, setValue }: any) => {
 								onPress={() => setIsVisible((prev) => !prev)}
 							>
 								{isVisible ? (
-									<EyeIcon width={20} height={20} />
+									<Image
+										source={require("./assets/eye-line.png")}
+										width={20}
+										height={20}
+									/>
 								) : (
-									<EyeClosedIcon width={20} height={20} />
+									<Image
+										source={require("./assets/eye-off-line.png")}
+										width={20}
+										height={20}
+									/>
 								)}
 							</Pressable>
 						)}
