@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Controller } from "react-hook-form";
 import { Pressable, Text, TextInput, View } from "react-native";
-import EyeClosedIcon from "./assets/eye-closed.svg";
-import EyeIcon from "./assets/eye.svg";
+import { EyeClosedIcon, EyeIcon } from "./assets/icon";
 
 const TextType = ({ field, control, errors, setValue }: any) => {
 	const [isVisible, setIsVisible] = useState(false);

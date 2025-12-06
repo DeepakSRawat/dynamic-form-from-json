@@ -49,55 +49,58 @@ export default function DynamicForm({
 					};
 					if (textType.includes(field.type)) {
 						return (
-							<TextType
-								{...commonProps}
-								field={field}
-								key={field.name}
-							/>
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<TextType {...commonProps} field={field} />
+							</View>
 						);
 					}
 					if (field.type === "phone") {
 						return (
-							<PhoneType
-								{...commonProps}
-								field={field}
-								key={field.name}
-							/>
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<PhoneType {...commonProps} field={field} />
+							</View>
 						);
 					}
 					if (field.type === "number") {
 						return (
-							<NumType
-								{...commonProps}
-								field={field}
-								key={field.name}
-							/>
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<NumType {...commonProps} field={field} />
+							</View>
 						);
 					}
 					if (field.type === "checkbox") {
 						return (
-							<CheckboxType
-								{...commonProps}
-								field={field}
-								key={field.name}
-							/>
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<CheckboxType {...commonProps} field={field} />
+							</View>
 						);
 					}
 					if (field.type === "select") {
 						return (
-							<SelectType
-								{...commonProps}
-								field={field}
-								key={field.name}
-							/>
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<SelectType {...commonProps} field={field} />
+							</View>
 						);
 					}
 					if (field.type === "radio") {
-						return <RadioType {...commonProps} key={field.name} />;
-					}
-					if (field.type === "datetime") {
 						return (
-							<DateTimeType {...commonProps} key={field.name} />
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<RadioType {...commonProps} />
+							</View>
+						);
+					}
+					if (field.type === "date") {
+						return (
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<DateTimeType {...commonProps} />
+							</View>
+						);
+					}
+					if (field.type === "time") {
+						return (
+							<View style={{ marginBottom: 10 }} key={field.name}>
+								<DateTimeType {...commonProps} />
+							</View>
 						);
 					}
 					return null;

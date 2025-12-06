@@ -7,7 +7,9 @@ const RadioType = ({ field, control, errors }: any) => {
 		<>
 			<Text>
 				{field.label}
-				<Text>{field.required ? "*" : ""}</Text>
+				<Text style={{ color: "red" }}>
+					{field.required ? "*" : ""}
+				</Text>
 			</Text>
 
 			<Controller
