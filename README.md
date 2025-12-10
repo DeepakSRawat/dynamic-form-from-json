@@ -10,7 +10,7 @@ It’s designed to make creating forms quick and simple. You just need to create
 
 # Install
 ```
-npm install form-from-json
+npm i dynamic-form-from-json
 ```
 
 # Demo
